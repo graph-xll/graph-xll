@@ -1,9 +1,8 @@
 # Graph-XLL
 > A Graph Library for Extra Large Graph Analytics on a Single Machine
 ***
-## Get Started
 
-### Input
+## Input
 
 The input graphs are in WebGraph format.
 
@@ -20,7 +19,7 @@ The first two files are for the forward (regular) graph. The other two are for t
 java -cp "lib/*" it.unimi.dsi.webgraph.BVGraph -o -O -L cnr-2000
 ```
 
-#### *Converting Edgelist Format to WebGraph Format*
+### *Converting Edgelist Format to WebGraph Format*
 
 This section is for the case when your graph is given a text file of edges (known as edgelist). *If your graph is already in WebGraph format, skip to the next section.*
 
@@ -52,7 +51,7 @@ For example:
 java -cp "lib/*" it.unimi.dsi.webgraph.BVGraph -g ArcListASCIIGraph car-2000.txt  cnr-2000
 ```
 
-#### *Undirected Graphs in WebGraph*
+### *Undirected Graphs in WebGraph*
 
 Undirected graphs are used in some algorithms, e.g., k-truss decomposition. After creating the offset files, remove self-loops in the graphs by running:
 
@@ -73,7 +72,7 @@ Now we obtain the undirected simple graph in WebGraph as the input:
 *cnr-2000-noself-sym.properties*
 *cnr-2000-noself-sym.offsets*
 
-### Compiling
+## Compiling
 
 The programs are already compiled with javac 1.8 (Java 8). Please use Java 8 or newer version.
 
@@ -81,7 +80,7 @@ The programs are already compiled with javac 1.8 (Java 8). Please use Java 8 or 
 javac -cp "lib/*" -d bin src/*
 ```
 
-### Running
+## Running
 
 ```
 java -cp "lib/*:bin" PageRankWG
